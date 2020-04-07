@@ -1,0 +1,11 @@
+,metricType,symbol,metric.currentEv/freeCashFlowAnnual,metric.currentEv/freeCashFlowTTM,metric.currentRatioAnnual,metric.currentRatioQuarterly,metric.freeCashFlowAnnual,metric.freeCashFlowTTM,metric.longTermDebt/equityAnnual,metric.longTermDebt/equityQuarterly,metric.netInterestCoverageAnnual,metric.netInterestCoverageTTM,metric.payoutRatioAnnual,metric.payoutRatioTTM,metric.quickRatioAnnual,metric.quickRatioQuarterly,metric.totalDebt/totalEquityAnnual,metric.totalDebt/totalEquityQuarterly
+0,financialStrength,AAPL,24.63068,22.92248,1.54013,1.59778,44777,49880,101.4576,104.6621,,,25.57007,24.48937,1.50129,1.55768,119.4048,121.6707
+1,financialStrength,BAC,,,,,55843,55843,81.79525,81.79525,,,23.64028,23.64028,,,161.458,161.458
+2,financialStrength,AMZN,89.50989,56.6192,1.09705,1.09705,21653,21653,65.27393,65.27393,18.93359,18.95698,,0,0.86363,0.86363,67.37995,67.37995
+3,financialStrength,T,41.24717,41.24717,0.79466,0.79466,14345,14345,82.1345,82.1345,3.77371,3.74544,108.1151,108.1151,0.7531,,88.56048,88.56048
+4,financialStrength,GOOGL,28.40786,28.40786,3.37405,3.37405,30972,30972,2.2607,2.2607,,,0,0,3.35196,3.35196,2.2607,2.2607
+5,financialStrength,MO,,,0.59016,0.59016,1522,1522,434.6191,434.6191,,,,,0.30964,0.30964,450.6911,450.6911
+6,financialStrength,DAL,15.82913,15.85127,0.40829,0.40829,2509,2509,57.77445,57.77445,29.86099,29.99099,20.57898,20.5833,0.34637,0.34637,72.66571,72.66571
+7,financialStrength,AA,,,1.37729,1.37729,307,307,43.75,43.75,4.73514,4.73514,,,0.73586,0.73586,43.77432,43.77432
+8,financialStrength,AXP,36.06486,36.06486,,,10565,10565,250.6827,250.6827,,,20.47957,20.47957,,,596.2637,596.2637
+9,financialStrength,DD,,,1.19806,1.19806,-9989,-9989,33.22273,33.22273,4.32707,4.32707,,,0.68057,0.68057,42.56716,42.56716
