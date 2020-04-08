@@ -3,6 +3,30 @@
 
 import requests
 import json
+import numpy as np
+
+import websocket
+import pandas as pd
+import requests
+from pandas.io.json import json_normalize
+import json
+from code_ref import get_keys
+from code_ref import findata
+from code_ref import FinnhubRequestException
+from code_ref import FinnhubAPIException
+import time
+import threading
+%matplotlib inline
+%load_ext autoreload
+%autoreload 2
+from ratelimit import limits
+from ratelimiter import RateLimiter
+import pandas as pd 
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+import glob
+from mpl_toolkits.mplot3d import Axes3D
 
 
 #API_Key function 
@@ -13,7 +37,7 @@ def get_keys(path):
 
 #Finnhub Class
     
-class findata:
+class finhub:
     API_URL = "https://finnhub.io/api/v1"
 
     def __init__(self, api_key, requests_params=None):
@@ -197,3 +221,17 @@ class FinnhubRequestException(Exception):
 
     def __str__(self):
         return "FinnhubRequestException: {}".format(self.message)
+    
+    
+    
+# Clustering Functions
+
+
+def plot_corr(df):
+    corr = df.corr()
+    mask = np.zeros_like(corr, dtype=np.bool)
+    mask[np.triu_indices_from(mask)] = True
+    f, ax = plt.subplots(figsize=(11, 9))
+    cmap = sns.diverging_palette(220, 10, as_cmap=True)
+    sns.heatmap(corr, mask=mask, cmap=cmap, vmax=.3, center=0,
+                square=True, linewidths=.5, cbar_kws={"shrink": .5})
