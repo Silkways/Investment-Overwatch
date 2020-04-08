@@ -10,15 +10,8 @@ import pandas as pd
 import requests
 from pandas.io.json import json_normalize
 import json
-from code_ref import get_keys
-from code_ref import findata
-from code_ref import FinnhubRequestException
-from code_ref import FinnhubAPIException
 import time
 import threading
-%matplotlib inline
-%load_ext autoreload
-%autoreload 2
 from ratelimit import limits
 from ratelimiter import RateLimiter
 import pandas as pd 
