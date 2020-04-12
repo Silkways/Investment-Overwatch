@@ -229,13 +229,12 @@ class FinnhubRequestException(Exception):
 
 
 def plot_corr(df):
+    plt.figure(figsize = [25,25])
     corr = df.corr()
     mask = np.zeros_like(corr, dtype=np.bool)
     mask[np.triu_indices_from(mask)] = True
-    f, ax = plt.subplots(figsize=(11, 9))
-    cmap = sns.diverging_palette(220, 10, as_cmap=True)
-    sns.heatmap(corr, mask=mask, cmap=cmap, vmax=.3, center=0,
-                square=True, linewidths=.5, cbar_kws={"shrink": .5})
+    cmap = 'YlGnBu'
+    return sns.heatmap(corr, mask = mask, annot=True, linewidths = .5, cmap = cmap);
   
 
  #===========================================================================================================================================================
@@ -246,3 +245,22 @@ def plot_corr(df):
 def usd_conv(row):
     c = CurrencyRates()
     return c.get_rate(row['ref_ccy'],row ['ccy'])
+
+ #===========================================================================================================================================================
+ # Move Colummns
+ #===========================================================================================================================================================
+
+def movecol(df, cols_to_move=[], ref_col='', place='After'):
+    
+    cols = df.columns.tolist()
+    if place == 'After':
+        seg1 = cols[:list(cols).index(ref_col) + 1]
+        seg2 = cols_to_move
+    if place == 'Before':
+        seg1 = cols[:list(cols).index(ref_col)]
+        seg2 = cols_to_move + [ref_col]
+    
+    seg1 = [i for i in seg1 if i not in seg2]
+    seg3 = [i for i in cols if i not in seg1 + seg2]
+    
+    return(df[seg1 + seg2 + seg3])
