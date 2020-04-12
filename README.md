@@ -74,18 +74,37 @@ We are using 27 financial features, stated below. We maintain optionality of fut
 ## Preprocessing and EDA
 
 We selected companies from several countries where the most data for the features above was available. 
-
 ![](visualizations/companies_country.png)
 
-We had around 30% of the data as missing values and decided to use KNN imputation after testing several imputation method such as iterative imputer with a linearRegression and Random Forests methods. KNN uses a probabilistic approach to determine the most likely value of a missing parameter. Effectively, we interpret KNN imputation as a 'pre-clustering' approach. This approach has been validated to work well on large datasets. 
+We decided to use KNN imputation for missing values after testing several imputation method such as iterative imputer with a linearRegression and Random Forests methods. KNN uses a probabilistic approach to determine the most likely value of a missing parameter. Effectively, we interpret KNN imputation as a 'pre-clustering' approach. This approach has been validated to work well on large datasets. 
 
 Four of our features are in local currency (e.g. EUR, DKK, HKD). We perform a conversion to USD in the preprocessing using python's Forex package. 
 
-After preprocessing we observe the following correlation matrix for our features. 
-
+After preprocessing we observe the following correlation among our features (subset displayed below). 
 ![](visualizations/clean_data_corr_hm.png)
 
 ## Modelling - PCA / KMeans Clustering / Agglomerative Clustering
+
+### PCA
+
+We begin by using PCA to identify potential simplification with less dimensions of our dataset that preserve the variance and decrease computation cost. We acknowledge that this may also impede us from diving into the features of the clusters. 
+    
+    - 23 features preserve 98% of the variance of our dataset / Limited effect of PCA
+![](visualizations/pca_components.png)
+
+### KMeans
+
+We initially ran KMeans on a wider dataset with 89 features -> narrowed to main dataset with 27 features as KMeans lead to complexity in extracting insights on clusters. 
+
+We run two sets of KMeans clustering - with and without PCA data. 
+
+As preliminary check for the optimal number of clusters to select we use the elbow method (non-PCA data example) calculating the sum of squared distances berween data point and centroid clusters, effectively the 'cost function' of KMeans.
+
+    - 34 clusters is optimal point under this method / we elect a large number of clusters to preserve observations (100 clusters)
+![](visualizations/elbow_non_pca.png)
+
+
+### Agglomerative Clustering (AGNES)
 
 
 
