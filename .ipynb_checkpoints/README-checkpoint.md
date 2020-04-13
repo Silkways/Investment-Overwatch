@@ -1,13 +1,10 @@
-IN Progress
-
 # Investment-Overwatch
 
-“My life seemed to be a series of events and accidents. Yet when I look back I see
-a pattern.” - Benoit Mandelbrot
+"Look for patterns, and then ask why those patterns exist." - Debra Kaye    
 
 ## Project Premise 
 
-The goal of this project is to screen global publicly traded companies using unsupervised machine learning.
+The goal of this project is to screen global publicly traded companies and identify patterns using unsupervised machine learning.
 
     - Number of companies: approximately 8,500 
     - Markets include: USA, Australia, Germany, France, Canada, United Kingdom, Norway, Sweden, Denmark, Singapore, Netherlands, Hong Kong, Spain, Italy, Belgium
@@ -21,16 +18,20 @@ Three main notebooks for collection, preprocessing and modelling of data. The ma
 
 Folders: 
 
-    - visualizations: contains some of graphs and images used to display the work
-    - api_data: contains data from API 
-    - metric_description: description of the financial features from Finnhub's API documentation
+    - api_data: contains data from API  
     - archived: files deleted in the course of the project
+    - clean_data: clean dataset saved in .csv
+    - visualizations: contains some of graphs and images used to display the work
+    - metric_description: description of the financial features from Finnhub's API documentation
+    - ticker_data: company tickers / company sector / country
     
 Main Repo Files: 
 
     - data_collection.ipynb: Contains examples of API loops to collect financial metrics of companies + additional finnhub features (company news, CEO compensation etc.) 
     - data_preprocessing.ipynb: Conatains data cleaning, imputation and initial observations -> output of this is 'clean_data.csv'
     - analysis_modelling.ipynb: Contains PCA and Clustering algorithms to group companies according to multiple financial dimensions
+    - main.ipynb: working notebook containing extended version of the other three notebook
+    - code_ref: functions / classes code repo
 
 ## Data Sources
 
@@ -164,24 +165,35 @@ A few examples of our findings under KMeans and AGNEs include the below. We labe
   
 ## Limitations Encountered
 
+Data collection
+
+    - API limits makes iteration process for data collection time lengthy (1 week to gather the data)
+    - JSON file structure differs across metrics - can impact data collection process
+    - Recommended to have a steady/fast network to avoid timeouts which can  be detrimental to collection
+    
 Dimensionality 
+
+    - Combining a large array of financial metrics makes extracting conclusions from cluster difficult, especially for large clusters
+    - Visualizing cluster features can be misleading as not all dimensions are captured (3D visuals > 2D visuals but not exhaustive)
 
 KMeans outliers
 
-Data collection
+    - Finding the optimal number of clusters balancing the elbow method and selection bias proved challenging
+    - Intra-cluster outliers influence the insight at a cluster level which can lead to erroneous assumptions
+
 
 ## Future Work
 
-### ANOVA
 
-To narrow down the clusters and select the most relevant ones we could use the ANOVA test 
+### Intra-Cluster variance
 
+To narrow down the clusters and select the most relevant ones we could use variance measurement for the features within each cluster and keep clusters only within a certain threshold. This could especially add value to the analysis with KMeans. 
 
 ### Sequential Clustering 
 
 We believe using the same financial metrics in sequence to narrow down the number of companies and identify clusters should allows us to pinpoint specific companies as good investment candidates. 
 
-An example would be take Enterprise Value / Free Cash flow and select the best 'valuation' clusters and then run an additional feature on the group of companies within those clusters. This iterative process will be the next step of this project.
+An example would be take Enterprise Value / Free Cash flow and select the best 'valuation' clusters and then run an additional feature on the group of companies within those clusters. This iterative process will be the next major step of this project.
 
 ### Data Iteration 
 
@@ -196,3 +208,8 @@ https://finnhub.io/
 https://uk.finance.yahoo.com/most-active
 
 https://www.cs.princeton.edu/sites/default/files/uploads/karina_marvin.pdf
+
+https://www.scikit-yb.org/en/latest/api/cluster/icdm.html
+
+https://scikit-learn.org/stable/auto_examples/cluster/plot_agglomerative_dendrogram.html
+
