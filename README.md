@@ -149,7 +149,7 @@ A few examples of our findings under KMeans and AGNEs include the below. We labe
 - cluster 26 - KMeans: 
           
       - Contains 35 companies in sectors such as: Mortgage Investment, Drug Delivery, Diversified Machinery, Semiconductor Equipment & Materials, Biotechnology
-      - Cluster primarily characterized by recent high recent growth in free operating cash flow (1.2x CAGR for five yars) and high dividend dividend yield (6% average)
+      - Cluster primarily characterized by recent high recent growth in free operating cash flow (1.2x CAGR for five years) and high dividend dividend yield (6% average)
       - The above characteristics are also the most consistent across the cluster. 
       - Companies within the cluster include: Boohoo.com PLC (UK), PetMed Express Inc (USA), EKINOPS S.A. (FRA), DISH Network Corporation (USA), ABG Sundal Collier (NOR)
       - For a portfolio containing diversified range of growth stocks, this cluster is an ideal initial screen. 
