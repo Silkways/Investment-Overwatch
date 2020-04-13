@@ -109,13 +109,23 @@ As preliminary check for the optimal number of clusters to select we use the elb
 
 We end up with a 100 clusters containing tens to thousands of companies. Clustering using Km does well to identify outliers which we notice in the clusters, but limits the interpretation possibilities of each cluster.
 
-    - We can assess how the clusters appear across features. 
+    - We can assess how the clusters appear across features with 3D visualization.  
 ![](visualizations/3D_cluster_KMeans.png)
 
+With the clusters we can link each company to a cluster and start gathering insight.
 
 ### Agglomerative Clustering (AGNES)
 
-Secondary modelling method used. AGNES clustering makes less assumptions than KMeans and allows us to have more visibility into the number of cluster threshold selection (at the expense of being more computationally expensive). The Dendgrogram displays the clustering sequence. 
+Secondary modelling method used. AGNES clustering makes less assumptions than KMeans and allows us to have more visibility into the number of cluster threshold selection (at the expense of being more computationally expensive).
+
+We test the cophenetic corelation to identify the most appropriate linkage method in the dendogram representing the clustering sequence. Per the results below we select the 'average linkage' which uses an average inter-cluster distance measure. 
+
+    - complete : 0.8631
+    - single : 0.9279
+    - ward : 0.4180
+    - average : 0.9825
+
+The Dendgrogram displays the clustering sequence. 
 ![](visualizations/dendogram_avg_dist.png)
 
 Dendogram truncation based on average Euclidian distance to select the number of clusters. 
@@ -124,16 +134,34 @@ Dendogram truncation based on average Euclidian distance to select the number of
     - Company per cluster metrics:
         - cluster distance of 2 yields --> median: 1.0 ; mean: 11.362680683311432 ; min: 1 ; max: 4537
 
-Display of resultsing clusters and number of companies within each:
+Display of resultsing clusters and number of companies within each (sample):
 ![](visualizations/agg_clust_display.png)
+
+After dendrogram truncation we can associate each company to its associated cluster and gather insight. 
 
 ## Project Evaluation / Conclusions
 
-cl52 - km 
+We find AGNES a more robust method than KMeans to treat outliers and overcome the large dimensionality. 
 
-cl621 - agg
+A few examples of our findings under KMeans and AGNEs include the below. We label each cluster with its corresponding id in the cluster range.  
 
+- cluster 26 - KMeans: 
+          
+      - Contains 35 companies in sectors such as: Mortgage Investment, Drug Delivery, Diversified Machinery, Semiconductor Equipment & Materials, Biotechnology
+      - Cluster primarily characterized by recent high recent growth in free operating cash flow (1.2x CAGR for five yars) and high dividend dividend yield (6% average)
+      - The above characteristics are also the most consistent across the cluster. 
+      - Companies within the cluster include: Boohoo.com PLC (UK), PetMed Express Inc (USA), EKINOPS S.A. (FRA), DISH Network Corporation (USA), ABG Sundal Collier (NOR)
+      - For a portfolio containing diversified range of growth stocks, this cluster is an ideal initial screen. 
+   
+- cluster 621 - AGNES: 
 
+      - Contains 20 companies in sectors such as: Diversified Electronics, Computer Peripherals, Textile Industrial, Data Storage, Mining
+      - cluster primarily characterized by a gross margin average of 36% but low/subzero net profit margin 
+      - Suggesting high depreciation and amortization / General expenses
+      - Companies within the cluster include: 3D systems Corporation (USA), Americas Silver Corporation (CAD), Leeds Group PLC(UK), NEXTDC Limited (AUD)
+      - Cluster suggest a combination of growth stocks (e.g. NEXTDC limited - Data Storage) with high capital spending and high-yield / distressed companies
+      - Screen for investors looking for dislocation of share price and business fundamentals applicable for Long/Short investments
+  
 ## Limitations Encountered
 
 Dimensionality 
@@ -143,6 +171,11 @@ KMeans outliers
 Data collection
 
 ## Future Work
+
+### ANOVA
+
+To narrow down the clusters and select the most relevant ones we could use the ANOVA test 
+
 
 ### Sequential Clustering 
 
@@ -162,5 +195,4 @@ https://finnhub.io/
 
 https://uk.finance.yahoo.com/most-active
 
-
-
+https://www.cs.princeton.edu/sites/default/files/uploads/karina_marvin.pdf
