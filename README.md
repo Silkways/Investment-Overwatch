@@ -158,7 +158,7 @@ A few examples of our findings under KMeans and AGNEs include the below. We labe
 
       - Contains 20 companies in sectors such as: Diversified Electronics, Computer Peripherals, Textile Industrial, Data Storage, Mining
       - cluster primarily characterized by a gross margin average of 36% but low/subzero net profit margin 
-      - Suggesting high depreciation and amortization / General expenses
+      - Suggesting high depreciation and amortization / general and admin expenses
       - Companies within the cluster include: 3D systems Corporation (USA), Americas Silver Corporation (CAD), Leeds Group PLC(UK), NEXTDC Limited (AUD)
       - Cluster suggest a combination of growth stocks (e.g. NEXTDC limited - Data Storage) with high capital spending and high-yield / distressed companies
       - Screen for investors looking for dislocation of share price and business fundamentals applicable for Long/Short investments
