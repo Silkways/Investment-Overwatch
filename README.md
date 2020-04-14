@@ -147,13 +147,21 @@ We find AGNES a more robust method than KMeans to treat outliers and overcome th
 A few examples of our findings under KMeans and AGNEs include the below. We label each cluster with its corresponding id in the cluster range.  
 
 - cluster 26 - KMeans: 
-          
+
       - Contains 35 companies in sectors such as: Mortgage Investment, Drug Delivery, Diversified Machinery, Semiconductor Equipment & Materials, Biotechnology
       - Cluster primarily characterized by recent high recent growth in free operating cash flow (1.2x CAGR for five years) and high dividend dividend yield (6% average)
       - The above characteristics are also the most consistent across the cluster. 
       - Companies within the cluster include: Boohoo.com PLC (UK), PetMed Express Inc (USA), EKINOPS S.A. (FRA), DISH Network Corporation (USA), ABG Sundal Collier (NOR)
       - For a portfolio containing diversified range of growth stocks, this cluster is an ideal initial screen. 
    
+- cluster 95 - KMeans: 
+
+      - High debt to equity and overall debt levels
+      - Interest coverage is dangerously low highlighting financial pressure
+      - French company Rallye SA among the companies in the cluster / in the news for financial struggles over the last few years
+      - Other companies include: Ashford Hospitality trust (REIT), Alexium Group Limited (Chemicals)
+      - Debt / financial strength metrics are key metrics to this cluster
+
 - cluster 621 - AGNES: 
 
       - Contains 20 companies in sectors such as: Diversified Electronics, Computer Peripherals, Textile Industrial, Data Storage, Mining

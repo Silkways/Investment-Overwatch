@@ -30,7 +30,7 @@ Main Repo Files:
     - data_collection.ipynb: Contains examples of API loops to collect financial metrics of companies + additional finnhub features (company news, CEO compensation etc.) 
     - data_preprocessing.ipynb: Conatains data cleaning, imputation and initial observations -> output of this is 'clean_data.csv'
     - data_modelling.ipynb: Contains PCA and Clustering algorithms to group companies according to multiple financial dimensions
-    - main.ipynb: working notebook containing extended version of the other three notebook
+    - main.ipynb: working notebook containing extended combined version of the other three notebooks
     - code_ref: functions / classes code repo
 
 ## Data Sources
@@ -39,7 +39,7 @@ The primary source of data is Finnhub, a free platform where you can access a wi
 
 For more insights on Finnhub, here is an introductory blog: 
 
-    - https://medium.com/@augustin.goudet/introduction-to-finnhub-97c2117dd9a9
+https://medium.com/@augustin.goudet/introduction-to-finnhub-97c2117dd9a9
 
 ## Data Description
 
@@ -147,18 +147,26 @@ We find AGNES a more robust method than KMeans to treat outliers and overcome th
 A few examples of our findings under KMeans and AGNEs include the below. We label each cluster with its corresponding id in the cluster range.  
 
 - cluster 26 - KMeans: 
-          
+
       - Contains 35 companies in sectors such as: Mortgage Investment, Drug Delivery, Diversified Machinery, Semiconductor Equipment & Materials, Biotechnology
       - Cluster primarily characterized by recent high recent growth in free operating cash flow (1.2x CAGR for five years) and high dividend dividend yield (6% average)
       - The above characteristics are also the most consistent across the cluster. 
       - Companies within the cluster include: Boohoo.com PLC (UK), PetMed Express Inc (USA), EKINOPS S.A. (FRA), DISH Network Corporation (USA), ABG Sundal Collier (NOR)
       - For a portfolio containing diversified range of growth stocks, this cluster is an ideal initial screen. 
    
+- cluster 95 - KMeans: 
+
+      - High debt to equity and overall debt levels
+      - Interest coverage is dangerously low highlighting financial pressure
+      - French company Rallye SA among the companies in the cluster / in the news for financial struggles over the last few years
+      - Other companies include: Ashford Hospitality trust (REIT), Alexium Group Limited (Chemicals)
+      - Debt / financial strength metrics are key metrics to this cluster
+
 - cluster 621 - AGNES: 
 
       - Contains 20 companies in sectors such as: Diversified Electronics, Computer Peripherals, Textile Industrial, Data Storage, Mining
       - cluster primarily characterized by a gross margin average of 36% but low/subzero net profit margin 
-      - Suggesting high depreciation and amortization / General expenses
+      - Suggesting high depreciation and amortization / general and admin expenses
       - Companies within the cluster include: 3D systems Corporation (USA), Americas Silver Corporation (CAD), Leeds Group PLC(UK), NEXTDC Limited (AUD)
       - Cluster suggest a combination of growth stocks (e.g. NEXTDC limited - Data Storage) with high capital spending and high-yield / distressed companies
       - Screen for investors looking for dislocation of share price and business fundamentals applicable for Long/Short investments
