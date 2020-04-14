@@ -30,7 +30,7 @@ Main Repo Files:
     - data_collection.ipynb: Contains examples of API loops to collect financial metrics of companies + additional finnhub features (company news, CEO compensation etc.) 
     - data_preprocessing.ipynb: Conatains data cleaning, imputation and initial observations -> output of this is 'clean_data.csv'
     - data_modelling.ipynb: Contains PCA and Clustering algorithms to group companies according to multiple financial dimensions
-    - main.ipynb: working notebook containing extended version of the other three notebook
+    - main.ipynb: working notebook containing extended combined version of the other three notebooks
     - code_ref: functions / classes code repo
 
 ## Data Sources
