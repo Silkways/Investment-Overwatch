@@ -30,7 +30,7 @@ Main Repo Files:
     - data_collection.ipynb: Contains examples of API loops to collect financial metrics of companies + additional finnhub features (company news, CEO compensation etc.) 
     - data_preprocessing.ipynb: Conatains data cleaning, imputation and initial observations -> output of this is 'clean_data.csv'
     - data_modelling.ipynb: Contains PCA and Clustering algorithms to group companies according to multiple financial dimensions
-    - main.ipynb: working notebook containing extended version of the other three notebook
+    - main.ipynb: working notebook containing extended combined version of the other three notebooks
     - code_ref: functions / classes code repo
 
 ## Data Sources
@@ -39,7 +39,7 @@ The primary source of data is Finnhub, a free platform where you can access a wi
 
 For more insights on Finnhub, here is an introductory blog: 
 
-    - https://medium.com/@augustin.goudet/introduction-to-finnhub-97c2117dd9a9
+https://medium.com/@augustin.goudet/introduction-to-finnhub-97c2117dd9a9
 
 ## Data Description
 
@@ -158,7 +158,7 @@ A few examples of our findings under KMeans and AGNEs include the below. We labe
 
       - Contains 20 companies in sectors such as: Diversified Electronics, Computer Peripherals, Textile Industrial, Data Storage, Mining
       - cluster primarily characterized by a gross margin average of 36% but low/subzero net profit margin 
-      - Suggesting high depreciation and amortization / General expenses
+      - Suggesting high depreciation and amortization / general and admin expenses
       - Companies within the cluster include: 3D systems Corporation (USA), Americas Silver Corporation (CAD), Leeds Group PLC(UK), NEXTDC Limited (AUD)
       - Cluster suggest a combination of growth stocks (e.g. NEXTDC limited - Data Storage) with high capital spending and high-yield / distressed companies
       - Screen for investors looking for dislocation of share price and business fundamentals applicable for Long/Short investments
