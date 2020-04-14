@@ -213,9 +213,10 @@ https://www.scikit-yb.org/en/latest/api/cluster/icdm.html
 
 https://scikit-learn.org/stable/auto_examples/cluster/plot_agglomerative_dendrogram.html
 
-##Contact Details
+## Contact Details
 
 Email: augustin.goudet@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/augustin-goudet-a7b23659/
 
 
