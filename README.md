@@ -39,7 +39,7 @@ The primary source of data is Finnhub, a free platform where you can access a wi
 
 For more insights on Finnhub, here is an introductory blog: 
 
-    - https://medium.com/@augustin.goudet/introduction-to-finnhub-97c2117dd9a9
+https://medium.com/@augustin.goudet/introduction-to-finnhub-97c2117dd9a9
 
 ## Data Description
 
