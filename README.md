@@ -1,6 +1,6 @@
 # Investment-Overwatch
 
-"Look for patterns, and then ask why those patterns exist." - Debra Kaye    
+>"Look for patterns, and then ask why those patterns exist." - Debra Kaye    
 
 ## Project Premise 
 
