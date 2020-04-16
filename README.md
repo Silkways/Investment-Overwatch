@@ -160,7 +160,7 @@ A few examples of our findings under KMeans and AGNEs include the below. We labe
       - Interest coverage is dangerously low highlighting financial pressure
       - French company Rallye SA among the companies in the cluster / in the news for financial struggles over the last few years
       - Other companies include: Ashford Hospitality trust (REIT), Alexium Group Limited (Chemicals)
-      - Debt / financial strength metrics are key metrics to this cluster
+      - Debt / financial solvency metrics are core metrics to this cluster
 
 - cluster 621 - AGNES: 
 
