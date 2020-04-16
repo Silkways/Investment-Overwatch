@@ -210,6 +210,8 @@ Simplifying the dataset we use and starting with a smaller set of companies and 
 
 ## References 
 
+http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf
+
 https://pdfs.semanticscholar.org/6db3/08779954a4006d87ce68148ff2aaa176dfb2.pdf
 
 https://finnhub.io/
