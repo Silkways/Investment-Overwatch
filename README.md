@@ -195,7 +195,7 @@ KMeans outliers
 
 ### Intra-Cluster variance
 
-To narrow down the clusters and select the most relevant ones we could use variance measurement for the features within each cluster and keep clusters only within a certain threshold. This could especially add value to the analysis with KMeans. To address intra cluster variance we can use Gaussian Mixture Models. GMM estimates the likelihood pf each datapoint belonging to the cluster. We apply it below as an example. 
+To narrow down the clusters and select the most relevant ones we could use variance measurement for the features within each cluster and keep clusters only within a certain threshold. This could especially add value to the analysis with KMeans. To address intra cluster variance we can use Gaussian Mixture Models. GMM estimates the likelihood of each datapoint belonging to the cluster. We apply it below as an example. 
 ![](visualizations/GMM.png)
 
 ### Sequential Clustering 
